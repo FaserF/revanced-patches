@@ -4,6 +4,9 @@ pluginManagement {
     repositories {
         gradlePluginPortal()
         google()
+        mavenCentral()
+        maven { url = uri("https://maven.revanced.app") }
+        maven { url = uri("https://jitpack.io") }
         maven {
             name = "githubPackages"
             url = uri("https://maven.pkg.github.com/revanced/registry")

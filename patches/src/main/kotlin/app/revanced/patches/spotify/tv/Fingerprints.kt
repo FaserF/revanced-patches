@@ -8,11 +8,11 @@ import com.android.tools.smali.dexlib2.AccessFlags
 
 context(BytecodePatchContext)
 internal val accountAttributeFingerprint get() = fingerprint {
-    custom { _, classDef -> classDef.type == "Lcom/spotify/remoteconfig/internal/AccountAttribute;" }
+    strings("AccountAttribute")
 }
 
 context(BytecodePatchContext)
 internal val productStateProtoGetMapFingerprint get() = fingerprint {
     returns("Ljava/util/Map;")
-    custom { _, classDef -> classDef.type == "Lcom/spotify/remoteconfig/internal/ProductStateProto;" }
+    strings("sp://product-state/v1/values")
 }

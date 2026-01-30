@@ -5,6 +5,7 @@ pluginManagement {
         mavenLocal()
         gradlePluginPortal()
         google()
+        maven { url = uri("https://maven.revanced.app") }
         maven { setUrl("https://jitpack.io") }
         maven {
             name = "GitHubPackages"
@@ -18,7 +19,7 @@ pluginManagement {
 }
 
 plugins {
-    id("app.revanced.patches") version "1.0.0-dev.6"
+    id("app.revanced.patches") version "21.0.0"
 }
 
 settings {

@@ -1,4 +1,8 @@
 {
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FaserF/revanced-patches.git"
+  },
   "devDependencies": {
     "@saithodev/semantic-release-backmerge": "^4.0.1",
     "@semantic-release/changelog": "^6.0.3",

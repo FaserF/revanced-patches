@@ -2,11 +2,11 @@ group = "app.revanced"
 
 patches {
     about {
-        name = "ReVanced Patches"
+        name = "FaserF Patches"
         description = "Patches for ReVanced"
-        source = "git@github.com:revanced/revanced-patches.git"
-        author = "ReVanced"
-        contact = "contact@revanced.app"
+        source = "git@github.com:FaserF/revanced-patches.git"
+        author = "FaserF"
+        contact = "https://github.com/FaserF/revanced-patches/issues"
         website = "https://revanced.app"
         license = "GNU General Public License v3.0"
     }
@@ -50,9 +50,12 @@ kotlin {
 publishing {
     repositories {
         maven {
-            name = "githubPackages"
-            url = uri("https://maven.pkg.github.com/revanced/revanced-patches")
-            credentials(PasswordCredentials::class)
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/FaserF/revanced-patches")
+            credentials {
+                username = System.getenv("GITHUB_ACTOR") ?: ""
+                password = System.getenv("GITHUB_TOKEN") ?: ""
+            }
         }
     }
 }
